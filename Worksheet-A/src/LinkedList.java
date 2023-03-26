@@ -37,6 +37,7 @@ public class LinkedList {
         this.size++;
     }
 
+    // Question 1
     static Element insertInSorted(LinkedList sortedList, int value) {
         Element node = new Element(value);
         if (sortedList.head == null) {

@@ -3,6 +3,7 @@ import java.util.Stack;
 
 public class Balanced {
 
+    // Question 4
     static boolean isBalanced(String expr) {
         Stack<Character> st = new Stack<>();
         if (expr.length() == 0)

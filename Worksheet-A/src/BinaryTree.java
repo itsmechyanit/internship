@@ -81,6 +81,7 @@ public class BinaryTree {
 
     }
 
+    // Question 5
     void leftView() {
         if (root == null)
             return;
@@ -121,6 +122,7 @@ public class BinaryTree {
         System.out.println();
     }
 
+    // Question 2 helper function
     int heightHelper(Node root) {
         if (root == null)
             return 0;
@@ -134,6 +136,7 @@ public class BinaryTree {
         }
     }
 
+    // Question 2
     int height() {
         return heightHelper(this.root);
     }
@@ -163,6 +166,7 @@ public class BinaryTree {
         print(this.root);
     }
 
+    // Question 3 helper function
     static void inOrder(Node root, ArrayList<Integer> output) {
         if (root == null)
             return;
@@ -171,6 +175,7 @@ public class BinaryTree {
         inOrder(root.right, output);
     }
 
+    // Question 3 helper function
     static ArrayList<Integer> inOrder(Node root) {
         ArrayList<Integer> output = new ArrayList<>();
         inOrder(root, output);
@@ -178,6 +183,7 @@ public class BinaryTree {
 
     }
 
+    // Question 3 helper function
     static boolean isSorted(ArrayList<Integer> al) {
         if (al.size() == 0)
             return true;
@@ -190,6 +196,7 @@ public class BinaryTree {
         return true;
     }
 
+    // Question 3
     static boolean isBST(Node root) {
         ArrayList<Integer> al = inOrder(root);
         if (isSorted(al))
