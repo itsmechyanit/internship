@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.Scanner;
 
 public class SecureRandomPassword {
     private char[] capital_letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
@@ -15,7 +14,10 @@ public class SecureRandomPassword {
     private int length = 0;
     private String password = "";
 
-    SecureRandomPassword(int len) {
+    SecureRandomPassword() {
+        Random random = new Random();
+        // get a random length between 8 to 16 both inclusive
+        int len = random.nextInt(8, 17);
         length = len;
         createSecurePassword();
 
@@ -152,18 +154,20 @@ public class SecureRandomPassword {
 
     public static void main(String[] args) {
         System.out.println(
-                "This application will create a random password based on the length provided by the user. The program will also display the strength of the password");
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter the length of the password that you want to create");
-        int n = sc.nextInt();
-        while (n < 8 || n > 16) {
-            System.out.println("The length of the password should be at least 8 and at most 16");
-            System.out.println("Please enter the valid length in the range 8-16 both inclusive");
-            n = sc.nextInt();
-        }
-        SecureRandomPassword sr = new SecureRandomPassword(n);
+                "This application will create a random password of length between 8 to 16 characters both inclusive");
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Please enter the length of the password that you want to
+        // create");
+        // int n = sc.nextInt();
+        // while (n < 8 || n > 16) {
+        // System.out.println("The length of the password should be at least 8 and at
+        // most 16");
+        // System.out.println("Please enter the valid length in the range 8-16 both
+        // inclusive");
+        // n = sc.nextInt();
+        // }
+        SecureRandomPassword sr = new SecureRandomPassword();
         sr.printPassword();
-        sc.close();
 
     }
 
