@@ -1,0 +1,38 @@
+.nav {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  position: fixed;
+  width: 100%;
+  padding-top: 1rem;
+  z-index: 1;
+  transition: all 0.5s ease-in;
+}
+.nav__black {
+  background-color: rgb(0, 5, 13);
+}
+
+.nav__logo {
+  height: 5rem;
+  object-fit: contain;
+}
+
+.nav__right__img {
+  height: 5rem;
+  object-fit: contain;
+}
+
+.nav__right__txt {
+  /*color: #1a98ff;*/
+  color: white;
+  font-size: 1.8rem;
+}
+
+.nav__right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
