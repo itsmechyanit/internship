@@ -1,0 +1,126 @@
+.hero {
+  max-width: 130rem;
+  margin: 4.8rem auto;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 0 3.5rem;
+  padding: 0 1rem;
+}
+
+.hero__text-box {
+  grid-column-start: 1;
+  padding: 3.5rem;
+  background: var(--gradient-box-w);
+  box-shadow: var(--shadow-white-3);
+  border-radius: 10px 10px 0 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero__text-box:hover {
+  transform: translateY(-1rem);
+}
+
+.hero__user {
+  height: 6rem;
+  width: 6rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: rgba(255, 1, 77, 0.219);
+  margin-bottom: 2rem;
+}
+
+.hero__title {
+  font-family: var(--font-secondary);
+  font-weight: var(--p-bold);
+  margin-bottom: 1.1rem;
+  line-height: 6.2rem;
+  font-size: 5.2rem;
+  color: var(--color-body-white);
+}
+
+.hero__title span {
+  color: var(--color-primary);
+}
+
+.hero__description {
+  color: var(--color-body-white);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: var(--p-regular);
+  margin-bottom: 3rem;
+}
+
+.hero__user-info {
+  color: var(--color-body-white);
+  font-size: 1.6rem;
+  font-weight: var(--p-regular);
+  line-height: 2.4rem;
+}
+
+.info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero__user-info > .info:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.hero__user span {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(255, 1, 77, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__user .hero__icon {
+  color: white;
+}
+
+.hero__icon {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+}
+
+.hero__img-box {
+  /* grid-column-start: 2; */
+  padding: 3.5rem;
+  background: var(--gradient-box-w);
+  box-shadow: var(--shadow-white-3);
+  border-radius: 10px 10px 0 0;
+  height: 60rem;
+}
+
+.hero__img-box:hover {
+  transform: translateY(-1rem);
+  transition: all 0.5s ease-in-out;
+}
+
+.hero__img-box figure {
+  height: 100%;
+  background-image: url("../../public/MyPicture.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* .hero__img {
+  max-height: 100%;
+  object-fit: fill;
+} */
+
+@media (max-width: 56em) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+  }
+}

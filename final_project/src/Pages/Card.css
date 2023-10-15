@@ -1,0 +1,116 @@
+.card {
+  background: var(--gradient-box-w);
+  box-shadow: var(--shadow-white-3);
+  background-color: transparent;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  transition: all 1s;
+}
+
+.card figure {
+  flex: 0 0 35%;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+.card__img:hover {
+  transform: scale(1.1);
+}
+
+.card:hover {
+  background: none;
+  background-color: var(--color-primary);
+}
+
+.card:hover .card__title {
+  color: var(--color-white);
+}
+
+.card:hover .card__subtitle {
+  color: var(--color-white);
+}
+
+.card:hover .card__description {
+  color: var(--color-white);
+}
+
+.card__content {
+  flex: 0 0 45%;
+}
+
+.card__date {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.2rem 0.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+}
+
+.card__title {
+  margin-top: 1rem;
+  font-size: 2.6rem;
+  color: var(--color-heading-wv);
+  font-weight: 500;
+  line-height: 3.2rem;
+  font-family: var(--font-secondary);
+}
+
+.card__subtitle {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-body-white);
+  font-weight: 400;
+  margin-bottom: 7px;
+  line-height: 1.4;
+  font-family: var(--font-secondary);
+}
+
+.card__description {
+  color: var(--color-body-white);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: var(--p-regular);
+  margin-bottom: 3rem;
+}
+
+.card__button {
+  box-shadow: var(--shadow-white-3);
+  background: var(--gradient-box-w);
+  border-radius: 6px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 500;
+  border: 0 none;
+  padding: 1.5rem 3.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 38em) {
+  .card {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .card figure {
+    width: 80%;
+    flex: 0 0 auto;
+  }
+
+  .card__content {
+    width: 80%;
+    flex: 0 0 auto;
+  }
+}

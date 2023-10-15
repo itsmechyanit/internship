@@ -1,0 +1,25 @@
+.education {
+  max-width: 130rem;
+  margin: 6.4rem auto;
+  display: grid;
+
+  gap: 3.5rem 0;
+}
+
+.education__subtitle {
+  color: var(--color-subtitle);
+  letter-spacing: 2px;
+  line-height: 1.4rem;
+  font-weight: var(--p-medium);
+  text-align: center;
+}
+
+.education__title {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-body-white);
+  font-family: var(--font-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+}

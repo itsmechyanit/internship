@@ -1,0 +1,41 @@
+.certifications {
+  max-width: 130rem;
+  margin: 6.4rem auto;
+  display: grid;
+  padding: 0 1rem;
+
+  gap: 3.5rem 0;
+  margin-top: 6.4rem;
+}
+
+.certifications__title {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-body-white);
+  font-family: var(--font-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.certificates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3.5rem;
+}
+
+.certificates__img {
+  max-width: 100%;
+}
+
+@media (max-width: 75em) {
+  .certifications {
+    gap: 2.5rem 0;
+  }
+
+  .certificates {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+  }
+}
